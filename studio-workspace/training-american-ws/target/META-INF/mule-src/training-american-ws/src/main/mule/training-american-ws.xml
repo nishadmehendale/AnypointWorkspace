@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:sockets="http://www.mulesoft.org/schema/mule/sockets" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/sockets http://www.mulesoft.org/schema/mule/sockets/current/mule-sockets.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="0113ff03-57bc-4773-83db-c2165b16d2a6" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="training-american-wsFlow" doc:id="6d8fba26-6986-4303-b76d-928942521aae" >
+		<http:listener doc:name="HTTP" doc:id="4e52d3f0-1bf5-4ea9-b2cc-538d5ad11b8d" config-ref="HTTP_Listener_config" path="/flights" allowedMethods="GET"/>
+		<set-payload value="Fasjkdak" doc:name="Set Payload" doc:id="71e1a904-a986-4c06-8f8d-c334fddfe9a0" />
+	</flow>
+</mule>
